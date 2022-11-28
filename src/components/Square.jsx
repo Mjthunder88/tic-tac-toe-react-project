@@ -5,7 +5,7 @@ const Square = (props) => {
     // console.log(props.player)
 
     const handleClick = () => {
-        return !props.squareValue ? 
+        return !props.squareValue && props.player ? 
         (props.squares.splice(props.index, 1, 'X'), props.setSquares(props.squares), props.setPlayer(!props.player)) : 
         (props.squares.splice(props.index, 1, 'O'), props.setSquares(props.squares), props.setPlayer(!props.player)) 
     }
